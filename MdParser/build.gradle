@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'kr.kro.hurdoo'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    implementation 'org.commonmark:commonmark:0.18.0' // https://github.com/commonmark/commonmark-java
+    implementation 'org.commonmark:commonmark-ext-gfm-tables:0.18.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
