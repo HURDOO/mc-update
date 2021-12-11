@@ -39,7 +39,7 @@ public class KMF {
                 .replaceAll("[_]{2}([^*]+)[_]{2}","<u>$1</u>")
                 .replaceAll("[~]{2}([^*]+)[~]{2}","<del>$1</del>")
                 .replaceAll("_([^*]+)_","<i>$1</i>")
-                .replaceAll("\\*([^*\\n]+)\\*","<i>$1</i>")
+                .replaceAll("\\*([^ ][^*\\n]+)\\*","<i>$1</i>")
 
                 .replaceAll("`([^`]+)`","<code style='color:black;'>$1</code>")
                 .replaceAll("\\(([^()]+)\\)","<span style='font-size: 12px;'>$1</span>")
@@ -53,27 +53,9 @@ public class KMF {
 
         ;
 
-        /*// table
-        String[] split1 = content
-                .replaceAll("(\\n\\|([^\\n]+)\\n(\\|:-:)+\\|([^*]+)\\|\\n\\n)",
-                        "__TABLE_DIVIDE_START__$1__TABLE_DIVIDE_END__\n\n")
-                .split("__TABLE_DIVIDE_START__");
-
-        StringBuilder str = new StringBuilder();
-
-        for(int i=0;i<split1.length;i++) {
-            if(i == 0) {
-                str.append(split1[i]);
-                continue;
-            }
-            String[] split2 = split1[i].split("__TABLE_DIVIDE_END__");
-            str.append(parseTable(split2[0]))
-                    .append(split2[1]);
-        }
-
-        System.out.println(str);*/
-
+        System.out.println(INTRO);
         System.out.println(parseTable(content));
+        System.out.println(OUTRO);
     }
 
     private static String parseTable(String str) {
@@ -84,43 +66,73 @@ public class KMF {
         return htmlRenderer.render(document);
     }
 
-    /*public static void parse(File file) {
-        HtmlRenderer renderer = new HtmlRenderer.Builder()
-                .nodeRendererFactory(context -> new NodeRenderer() {
-                    @Override
-                    public Set<Class<? extends Node>> getNodeTypes() {
-                        return Set.of(Heading.class, FencedCodeBlock.class);
-                    }
+    private static final String INTRO = """
+            <p style="text-align: center;">
+            \t<br>
+            </p>
 
-                    @Override
-                    public void render(Node node) {
-                        HtmlWriter writer = context.getWriter();
+            <p style="text-align:center;"><strong><span style="font-size:22px;">▶ 베드락 에디션 1.18<span style="color:rgb(226,80,65);">.버전</span><span style="color:rgb(44,130,201);">.버전</span> ◀</span></strong></p>
 
-                        if(node instanceof Heading heading) {
-                            Text text = (Text) heading.getFirstChild();
+            <p style="text-align:center;"><strong>한줄요약</strong></p>
 
-                            switch(heading.getLevel()) {
-                                case 1:
-                                    writer.raw("<h1>" + text.getLiteral() + "</h1>");
-                                    // @TODO: image
-                                    break;
-                                case 2:
-                                    writer.raw("<strong><em><span style=\"font-size:20px;\">&ldquo; ");
-                                    writer.raw((text.getLiteral()));
-                                    writer.raw(" &rdquo;</span></em>");
-                                    break;
-                                default:
-                                    System.out.println("Cannot resolve heading level: " + heading.getLevel());
-                            }
-                            return;
-                        }
+            <p style="text-align: center;">
+            \t<br>
+            </p>
+            
+            <p style="text-align: center;">
+            \t<br>
+            </p>
+            """;
 
-                        if(node instanceof Paragraph paragraph) {
-                            Text text = (Text) paragraph.getFirstChild();
-                            writer.raw("");
-                        }
-
-                    }
-                }).build();
-    }*/
+    private static final String OUTRO = """
+            <p style="text-align:center;"><strong><span style="font-size:22px;">&lt; 베드락 에디션 베타 1.18<span style="color:rgb(226,80,65);">.10</span><span style="color:rgb(44,130,201);">.21</span> &gt;</span></strong></p>
+                        
+            <p style="text-align:center;">[ <a href="#" target="_blank" title="">공식 변경 로그</a> | <a href="https://minecraft.fandom.com/wiki/Bedrock_Edition_beta_버전" target="_blank" title="">마인크래프트 위키</a> ]</p>
+                        
+            <p style="text-align:center;">
+            	<br>
+            </p>
+                        
+            <p style="text-align:center;"><a href="https://www.koreaminecraft.net/?act=&vid=&mid=update&category=&search_target=tag&search_keyword=Caves+and+Cliffs" target="_blank" title="">[<strong>동굴과 절벽 업데이트</strong> 전체 보기]</a>
+            	<br><a href="https://www.koreaminecraft.net/?act=&vid=&mid=update&category=&search_target=tag&search_keyword=%EC%95%BC%EC%83%9D+%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8" target="_blank" title=""><strong>[</strong><strong>야생 업데이트</strong> 전체 보기<strong>]</strong></a>
+            	<br><a href="https://www.koreaminecraft.net/?act=&vid=&mid=update&category=&search_target=tag&search_keyword=1.18" target="_blank" title=""><strong>[</strong><strong>1.18</strong> 업데이트 전체 보기<strong>]</strong></a>
+            	<br><a href="https://www.koreaminecraft.net/?act=&vid=&mid=update&category=&search_target=tag&search_keyword=1.18.버전" target="_blank" title=""><strong>[</strong><strong>1.18.버전</strong> 베타 전체 보기<strong>]</strong></a></p>
+                        
+            <p style="text-align:center;">
+            	<br>
+            </p>
+                        
+            <p style="text-align:center;"><strong>1.19</strong>는 <strong>야생 업데이트</strong>에요.</p>
+                        
+            <p style="text-align:center;"><a href="https://www.koreaminecraft.net/index.php?mid=update&category=6427&document_srl=2875840" target="_blank" title=""><strong>[ 마인콘 2021 내용 보러 가기 ]</strong></a></p>
+                        
+            <p style="text-align:center;">
+            	<br>
+            </p>
+            <hr>
+                        
+            <p style="text-align:center;"><strong>베드락 에디션 베타 테스트에 참여해 보시겠어요?</strong></p>
+                        
+            <p style="text-align:center;">베타 테스트는 <strong>Android, Windows 10, Xbox One</strong>에서 참여할 수 있어요.</p>
+                        
+            <p style="text-align:center;">베드락 에디션의 베타는, 자바 에디션의 스냅샷과 다르게 <strong>게임 전체가 베타 버전</strong>으로 바뀌어요.</p>
+                        
+            <p style="text-align:center;">베타에서는 <strong>렐름에 참여할 수 없고</strong>, 자신과 같이 <strong>베타 테스트에 참여 중인 플레이어</strong>랑만 멀티플레이를 할 수 있어요.</p>
+                        
+            <p style="text-align:center;">베타 버전에서 플레이한 월드는 정식 출시 버전에서 즐길 수 없으니, 베타에서 월드를 열기 전에 먼저 <strong>월드 복사</strong>를 해두는 것이 좋아요.</p>
+                        
+            <p style="text-align:center;">마지막으로, 베타 버전은 불안정해요. 그러니까 베타 아니겠어요?</p>
+                        
+            <p style="text-align:center;">
+            	<br>
+            </p>
+                        
+            <p style="text-align:center;">준비가 되었다면, 아레의 글을 따라 베타 테스트에 참여해보세요.</p>
+                        
+            <p style="text-align:center;"><a href="https://www.koreaminecraft.net/review/2189651" target="_blank" title=""><strong><span style="font-size:20px;">[ 베드락 에디션 베타 테스트 참여 방법 ]</span></strong></a></p>
+                        
+            <p style="text-align:center;">
+            	<br>
+            </p>
+            """;
 }
