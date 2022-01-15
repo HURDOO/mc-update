@@ -1,1 +1,5 @@
 caves_and_cliffs_photo_contest.md
+.idea
+MdParser/build
+MdParser/.gradle
+MdParser/bin

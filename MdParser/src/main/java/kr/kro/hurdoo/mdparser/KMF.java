@@ -28,6 +28,7 @@ public class KMF {
 
         content = content
                 .replaceAll("\\[([^\\[\\]]+)]\\(BUG\\)","<a href='https://bugs.mojang.com/browse/$1' style='font-size:10px;'>#</a>")
+                .replaceAll("\\[([^\\[\\]]+)]\\(wiki\\/([^)]+)\\)","[$1](https://minecraft.fandom.com/Bedrock_Edition_$2)")
                 .replaceAll("\\[([^\\[\\]]+)]\\((http(s?)://([^)]+))\\)","<a href='$2' target='_blank'>$1</a>")
 
                 .replaceAll("`([^`\\n]*)\\(([^`\\n]*)\\)([^`\\n]*)`","$1&#40;$2&#41;$3")
@@ -45,7 +46,11 @@ public class KMF {
                 .replaceAll("\\(([^()]+)\\)","<span style='font-size: 12px;'>$1</span>")
                 .replaceAll("\\* ([^\\n]+)\\n","<p>$1</p>\n")
                 .replaceAll("([^-\\n]+)\\n-","<p></p><p style=\"font-size:20px;\"><strong><em>『 $1 』</em></strong></p>")
-                .replaceAll("\\n([^\\n]+)\\n=","<p></p><p></p><p style='font-size:36px;'><b>$1</b></p><p></p><p></p>")
+                .replaceAll("\\n([^\\n]+)\\n=","<p></p><hr><p style='font-size:36px;'><b>$1</b></p><p></p><p></p>")
+
+                .replaceAll("\\n#([^\\n#]+)\\n","\n<p style=\"text-align:center;\"><strong><span style=\"font-size:22px;\">▶ $1 ◀</span></strong></p>\n")
+                .replaceAll("\\n##([^\\n#]+)\\n","\n<p style=\"text-align:center;\"><strong>▶ $1 ◀</strong></p>\n")
+                .replaceAll("\\n###([^\\n#]+)\\n","\n<p style=\"text-align:center;\">[ $1 ]</p>\n")
 
                 .replaceAll("&#40;","(").replaceAll("&#41;",")")
                 .replaceAll("\\[([^\\[\\]]+)]\\(([^()]+)\\)","<ins title='$2'>$1</ins>")
@@ -54,16 +59,8 @@ public class KMF {
         ;
 
         System.out.println(INTRO);
-        System.out.println(parseTable(content));
+        System.out.println(Main.parseTable(content));
         System.out.println(OUTRO);
-    }
-
-    private static String parseTable(String str) {
-        List<Extension> extensions = List.of(TablesExtension.create());
-        Parser parser = Parser.builder().extensions(extensions).build();
-        Node document = parser.parse(str);
-        HtmlRenderer htmlRenderer = HtmlRenderer.builder().extensions(extensions).build();
-        return htmlRenderer.render(document);
     }
 
     private static final String INTRO = """
