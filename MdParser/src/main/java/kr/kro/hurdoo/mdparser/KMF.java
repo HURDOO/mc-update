@@ -90,8 +90,7 @@ public class KMF {
             	<br>
             </p>
                         
-            <p style="text-align:center;"><a href="https://www.koreaminecraft.net/?act=&vid=&mid=update&category=&search_target=tag&search_keyword=Caves+and+Cliffs" target="_blank" title="">[<strong>동굴과 절벽 업데이트</strong> 전체 보기]</a>
-            	<br><a href="https://www.koreaminecraft.net/?act=&vid=&mid=update&category=&search_target=tag&search_keyword=%EC%95%BC%EC%83%9D+%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8" target="_blank" title=""><strong>[</strong><strong>야생 업데이트</strong> 전체 보기<strong>]</strong></a>
+            <p style="text-align:center;"> <a href="https://www.koreaminecraft.net/?act=&vid=&mid=update&category=&search_target=tag&search_keyword=%EC%95%BC%EC%83%9D+%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8" target="_blank" title=""><strong>[</strong><strong>야생 업데이트</strong> 전체 보기<strong>]</strong></a>
             	<br><a href="https://www.koreaminecraft.net/?act=&vid=&mid=update&category=&search_target=tag&search_keyword=1.18" target="_blank" title=""><strong>[</strong><strong>1.18</strong> 업데이트 전체 보기<strong>]</strong></a>
             	<br><a href="https://www.koreaminecraft.net/?act=&vid=&mid=update&category=&search_target=tag&search_keyword=1.18.버전" target="_blank" title=""><strong>[</strong><strong>1.18.버전</strong> 베타 전체 보기<strong>]</strong></a></p>
                         
@@ -108,9 +107,14 @@ public class KMF {
             </p>
             <hr>
                         
+            <p style="text-align:center;">
+            	<br>
+            </p>
+            <hr style="text-align:center;">
+                        
             <p style="text-align:center;"><strong>베드락 에디션 베타 테스트에 참여해 보시겠어요?</strong></p>
                         
-            <p style="text-align:center;">베타 테스트는 <strong>Android, Windows 10, Xbox One</strong>에서 참여할 수 있어요.</p>
+            <p style="text-align:center;">베타 테스트는 <strong>Android, Windows, Xbox One</strong>에서 참여할 수 있어요.</p>
                         
             <p style="text-align:center;">베드락 에디션의 베타는, 자바 에디션의 스냅샷과 다르게 <strong>게임 전체가 베타 버전</strong>으로 바뀌어요.</p>
                         
@@ -124,9 +128,30 @@ public class KMF {
             	<br>
             </p>
                         
-            <p style="text-align:center;">준비가 되었다면, 아레의 글을 따라 베타 테스트에 참여해보세요.</p>
+            <p style="text-align:center;">준비가 되었다면, 아래의 글을 따라 베타 테스트에 참여해보세요.</p>
                         
             <p style="text-align:center;"><a href="https://www.koreaminecraft.net/review/2189651" target="_blank" title=""><strong><span style="font-size:20px;">[ 베드락 에디션 베타 테스트 참여 방법 ]</span></strong></a></p>
+                        
+            <p style="text-align:center;">
+            	<br>
+            </p>
+            <hr>
+                        
+            <p style="text-align:center;"><strong>베드락 에디션 프리뷰에 참여해 보시겠어요?<br></strong></p>
+                        
+            <p style="text-align:center;">프리뷰는 현재 <strong>iOS</strong>에서만 참여할 수 있어요.</p>
+                        
+            <p style="text-align:center;">베드락 프리뷰는 <strong>정식 출시 버전과 다른 앱</strong>으로 새로 설치되어요.</p>
+                        
+            <p style="text-align:center;">기존 <strong>설정과 월드 등이 호환되지는 않아요.</strong> 기기에 따라 <strong>일부 기능을 사용하지 못할</strong> 수도 있어요.</p>
+                        
+            <p style="text-align:center;">
+            	<br>
+            </p>
+                        
+            <p style="text-align:center;">준비가 되었다면, 아래의 글을 따라 프리뷰에 참여해보세요.</p>
+                        
+            <p style="text-align:center;"><a href="https://www.koreaminecraft.net/update/3094908" target="_blank" title=""><strong><span style="font-size:20px;">[ 베드락 에디션 프리뷰 참여 방법 ]</span></strong></a></p>
                         
             <p style="text-align:center;">
             	<br>
