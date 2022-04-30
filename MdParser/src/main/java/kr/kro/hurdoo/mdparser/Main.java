@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        KMF.parse(new File("1.18.20.23/1.18.20.23.md"));
+        KMF.parse(new File("1.18.31/1.18.31.md"));
     }
 
     public static String parseTable(String str) {
